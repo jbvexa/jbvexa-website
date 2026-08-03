@@ -1,5 +1,4 @@
 import About from "@/components/About/About";
-import Contact from "@/components/Contact/Contact";
 import Hero from "@/components/Hero/Hero";
 import Industries from "@/components/Industries/Industries";
 import Navbar from "@/components/Navbar/Navbar";
@@ -9,6 +8,7 @@ import TechnologyStack from "@/components/TechnologyStack/TechnologyStack";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
+import ContactForm from "@/components/Contact/ContactForm";
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
         <WhyChooseUs />
         <WhyChooseUs />
         <CTA />
-        <Contact />
+        <ContactForm />
         <Footer />
       </main>
     </>
