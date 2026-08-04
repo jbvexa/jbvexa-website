@@ -39,7 +39,10 @@ export default function ContactForm() {
     e.preventDefault();
 
     if (!formData.fullName || !formData.email || !formData.phone || !formData.message){
-      setStatus({type:"error",text:"Please fill in all required fields."});
+      setStatus({
+      type: "error",
+      text: "Please complete all required fields (Full Name, Email, Phone Number and Project Requirement).",
+      });
       return;
     }
 
@@ -61,7 +64,7 @@ export default function ContactForm() {
 
       setStatus({
         type:"success",
-        text:"Thank you! Your inquiry has been submitted successfully. We'll contact you shortly.",
+        text: "✅ Thank you! Your enquiry has been received successfully. Our team will review your requirement and contact you within 1 business day.",
       });
 
       setFormData(initialState);
@@ -69,7 +72,7 @@ export default function ContactForm() {
     }catch{
       setStatus({
         type:"error",
-        text:"Unable to send your inquiry. Please try again.",
+        text: "❌ We couldn't send your enquiry at the moment. Please try again in a few minutes or email us directly at info@jbvexa.com.",
       });
     }finally{
       setLoading(false);
@@ -198,32 +201,34 @@ export default function ContactForm() {
               </div>
 
               {status.type && (
-                <div className={`rounded-xl p-4 text-sm ${
-                  status.type==="success"
-                    ? "bg-green-50 text-green-700"
-                    : "bg-red-50 text-red-700"
-                }`}>
-                  {status.text}
-                </div>
+                <div
+  className={`rounded-xl border p-4 text-sm leading-6 ${
+    status.type === "success"
+      ? "border-green-200 bg-green-50 text-green-700"
+      : "border-red-200 bg-red-50 text-red-700"
+  }`}
+>
+  {status.text}
+</div>
               )}
 
               <button
-                type="submit"
-                disabled={loading}
-                className="inline-flex items-center gap-3 rounded-full bg-[#071B4D] px-8 py-4 font-semibold text-white transition hover:bg-[#0F5DBB] disabled:cursor-not-allowed disabled:opacity-60"
-              >
-                {loading ? (
-                  <>
-                    <Loader2 className="animate-spin" size={18}/>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    Send Inquiry
-                    <Send size={18}/>
-                  </>
-                )}
-              </button>
+  type="submit"
+  disabled={loading}
+  className="inline-flex items-center gap-3 rounded-full bg-[#071B4D] px-8 py-4 font-semibold text-white transition hover:bg-[#0F5DBB] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60 disabled:pointer-events-none"
+>
+  {loading ? (
+    <>
+      <Loader2 className="animate-spin" size={18} />
+      Sending Inquiry...
+    </>
+  ) : (
+    <>
+      Send Inquiry
+      <Send size={18} />
+    </>
+  )}
+</button>
 
             </form>
           </div>
