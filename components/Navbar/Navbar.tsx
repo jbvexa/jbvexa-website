@@ -8,7 +8,7 @@ const links = [
   { label: "About", href: "#about", id: "about" },
   { label: "Services", href: "#services", id: "services" },
   { label: "Industries", href: "#industries", id: "industries" },
-  { label: "Contact", href: "#contact", id: "contact" },
+  { label: "Contact", href: "#contact-form", id: "contact" },
 ];
 
 export default function Navbar() {
@@ -45,7 +45,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a href="#contact" className="rounded-lg bg-[#071B4D] px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0F5DBB] hover:shadow-lg">
+        <a href="#contact-form" className="rounded-lg bg-[#071B4D] px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0F5DBB] hover:shadow-lg">
           Get Started
         </a>
       </div>
