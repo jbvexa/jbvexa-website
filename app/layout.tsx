@@ -40,9 +40,16 @@ export const metadata: Metadata = {
   publisher: "JBVEXA Technologies",
 
   robots: {
+  index: true,
+  follow: true,
+  googleBot: {
     index: true,
     follow: true,
+    "max-video-preview": -1,
+    "max-image-preview": "large",
+    "max-snippet": -1,
   },
+},
 
   alternates: {
     canonical: "https://www.jbvexa.com",
@@ -84,9 +91,8 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
   },
 
   category: "Technology",

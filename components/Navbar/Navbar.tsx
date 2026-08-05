@@ -8,7 +8,7 @@ const links = [
   { label: "About", href: "#about", id: "about" },
   { label: "Services", href: "#services", id: "services" },
   { label: "Industries", href: "#industries", id: "industries" },
-  { label: "Contact", href: "#contact-form", id: "contact" },
+  { label: "Contact", href: "#contact-form", id: "contact-form"},
 ];
 
 export default function Navbar() {

@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Send, Loader2 } from "lucide-react";
+import {
+  Send,
+  Loader2,
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+} from "lucide-react";
 
 type FormData = {
   fullName: string;
@@ -80,7 +87,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact-form" className="bg-[#F8FCFC] py-24">
+    <section id="contact-form" className="bg-[#F8FCFC] pt-36 pb-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-16 lg:grid-cols-2">
           <div>
@@ -101,21 +108,75 @@ export default function ContactForm() {
             </p>
 
             <div className="mt-12 space-y-8">
-              <div>
-                <h3 className="font-semibold text-[#071B4D]">Business Email</h3>
-                <p className="mt-2 text-slate-600">info@jbvexa.com</p>
-              </div>
 
-              <div>
-                <h3 className="font-semibold text-[#071B4D]">Phone</h3>
-                <p className="mt-2 text-slate-600">+91 96195 23623</p>
-              </div>
+  <div className="flex items-start gap-4">
+    <Mail className="mt-1 text-[#19D3B4]" size={22} />
+    <div>
+      <h3 className="font-semibold text-[#071B4D]">
+        Business Email
+      </h3>
 
-              <div>
-                <h3 className="font-semibold text-[#071B4D]">Office</h3>
-                <p className="mt-2 text-slate-600">Thane, Maharashtra, India</p>
-              </div>
-            </div>
+      <a
+  href="mailto:info@jbvexa.com"
+  className="mt-2 inline-block text-slate-600 hover:text-[#19D3B4] transition-colors"
+>
+  info@jbvexa.com
+</a>
+    </div>
+  </div>
+
+  <div className="flex items-start gap-4">
+    <Phone className="mt-1 text-[#19D3B4]" size={22} />
+
+    <div>
+      <h3 className="font-semibold text-[#071B4D]">
+        Phone
+      </h3>
+
+      <a
+  href="tel:+919619523623"
+  className="mt-2 inline-block text-slate-600 hover:text-[#19D3B4] transition-colors"
+>
+  +91 96195 23623
+</a>
+    </div>
+  </div>
+
+  <div className="flex items-start gap-4">
+    <MapPin className="mt-1 text-[#19D3B4]" size={22} />
+
+    <div>
+      <h3 className="font-semibold text-[#071B4D]">
+        Office
+      </h3>
+
+      <p className="mt-2 text-slate-600">
+        JBVEXA Technologies Pvt. Ltd.
+<br />
+Thane, Maharashtra, India
+        <br />
+        India
+      </p>
+    </div>
+  </div>
+
+  <div className="flex items-start gap-4">
+    <Clock className="mt-1 text-[#19D3B4]" size={22} />
+
+    <div>
+      <h3 className="font-semibold text-[#071B4D]">
+        Business Hours
+      </h3>
+
+      <p className="mt-2 text-slate-600">
+        Mon – Fri
+        <br />
+        9:30 AM – 6:30 PM IST
+      </p>
+    </div>
+  </div>
+
+</div>
           </div>
 
           <div className="rounded-3xl bg-white p-10 shadow-xl">
