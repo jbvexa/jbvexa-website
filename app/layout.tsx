@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.jbvexa.com"),
@@ -109,9 +109,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-white text-slate-900">
-        <GoogleAnalytics />
-        {children}
-      </body>
+  {children}
+
+  <GoogleAnalytics gaId="G-VJB46BW9SZ" />
+</body>
     </html>
   );
 }
