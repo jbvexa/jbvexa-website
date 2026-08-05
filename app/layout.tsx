@@ -3,6 +3,7 @@ import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import StructuredData from "@/components/StructuredData";
 import ServiceSchema from "@/components/ServiceSchema";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.jbvexa.com"),
@@ -111,12 +112,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-white text-slate-900">
-  {children}
-
-  <GoogleAnalytics gaId="G-VJB46BW9SZ" />
-  <StructuredData />
-  <ServiceSchema />
-</body>
+        <StructuredData />
+        <ServiceSchema />
+        <BreadcrumbSchema />
+        <GoogleAnalytics gaId="G-VJB46BW9SZ" />
+        {children}
+      </body>
     </html>
   );
 }
