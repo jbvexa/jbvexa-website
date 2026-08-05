@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.jbvexa.com"),
@@ -40,16 +41,16 @@ export const metadata: Metadata = {
   publisher: "JBVEXA Technologies",
 
   robots: {
-  index: true,
-  follow: true,
-  googleBot: {
     index: true,
     follow: true,
-    "max-video-preview": -1,
-    "max-image-preview": "large",
-    "max-snippet": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
-},
 
   alternates: {
     canonical: "https://www.jbvexa.com",
@@ -108,6 +109,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-white text-slate-900">
+        <GoogleAnalytics />
         {children}
       </body>
     </html>
