@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import StructuredData from "@/components/StructuredData";
+import ServiceSchema from "@/components/ServiceSchema";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.jbvexa.com"),
@@ -114,6 +115,7 @@ export default function RootLayout({
 
   <GoogleAnalytics gaId="G-VJB46BW9SZ" />
   <StructuredData />
+  <ServiceSchema />
 </body>
     </html>
   );
