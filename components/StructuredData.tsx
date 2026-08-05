@@ -1,48 +1,186 @@
 export default function StructuredData() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://www.jbvexa.com/#organization",
-    name: "JBVEXA Technologies Private Limited",
-    alternateName: "JBVEXA Technologies",
-    url: "https://www.jbvexa.com",
-    logo: "https://www.jbvexa.com/logo.png",
-    image: "https://www.jbvexa.com/logo.png",
-    description:
-      "JBVEXA Technologies Private Limited delivers Enterprise Software Development, Artificial Intelligence, Cloud Engineering, Data Engineering, Business Intelligence, Cyber Security and Digital Transformation solutions.",
+    "@graph": [
+      {
+        "@type": "Corporation",
+        "@id": "https://www.jbvexa.com/#organization",
 
-    slogan: "Engineering Digital Excellence",
+        name: "JBVEXA Technologies Private Limited",
 
-    telephone: "+91-9619523623",
+        alternateName: "JBVEXA Technologies",
 
-    email: "info@jbvexa.com",
+        url: "https://www.jbvexa.com",
 
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Kopri",
-      addressRegion: "Maharashtra",
-      postalCode: "400603",
-      addressCountry: "IN",
-    },
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.jbvexa.com/logo.png",
+        },
 
-    identifier: "U62010MR2026PTC478116",
+        image: "https://www.jbvexa.com/logo.png",
 
-    foundingDate: "2026-07-07",
+        slogan: "Engineering Digital Excellence",
 
-    areaServed: {
-      "@type": "Country",
-      name: "India",
-    },
+        description:
+          "JBVEXA Technologies Private Limited delivers Enterprise Software Development, Artificial Intelligence, Cloud Engineering, Data Engineering, Business Intelligence, Cyber Security and Digital Transformation solutions.",
 
-    knowsAbout: [
-      "Artificial Intelligence",
-      "Enterprise Software Development",
-      "Cloud Engineering",
-      "Business Intelligence",
-      "Data Engineering",
-      "Cyber Security",
-      "Digital Transformation",
-      "IT Consulting",
+        email: "info@jbvexa.com",
+
+        telephone: "+91-9619523623",
+
+        identifier: "U62010MR2026PTC478116",
+
+        foundingDate: "2026-07-07",
+
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Kopri",
+          addressRegion: "Thane, Maharashtra",
+          postalCode: "400603",
+          addressCountry: "IN",
+        },
+
+        areaServed: [
+          {
+            "@type": "Country",
+            name: "India",
+          },
+          {
+            "@type": "Place",
+            name: "Global",
+          },
+        ],
+
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            telephone: "+91-9619523623",
+            contactType: "Customer Support",
+            availableLanguage: ["English", "Hindi"],
+          },
+        ],
+
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Technology Services",
+
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Artificial Intelligence Solutions",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Enterprise Software Development",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Cloud Engineering",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Data Engineering",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Business Intelligence",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Cyber Security",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Digital Transformation",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "IT Consulting",
+              },
+            },
+          ],
+        },
+
+        knowsAbout: [
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Generative AI",
+          "Cloud Engineering",
+          "AWS",
+          "Azure",
+          "Oracle Cloud",
+          "Business Intelligence",
+          "Tableau",
+          "Power BI",
+          "Data Engineering",
+          "ETL",
+          "Data Warehousing",
+          "Cyber Security",
+          "Enterprise Software Development",
+          "Digital Transformation",
+          "IT Consulting",
+        ],
+      },
+
+      {
+        "@type": "WebSite",
+        "@id": "https://www.jbvexa.com/#website",
+
+        url: "https://www.jbvexa.com",
+
+        name: "JBVEXA Technologies",
+
+        publisher: {
+          "@id": "https://www.jbvexa.com/#organization",
+        },
+
+        inLanguage: "en-IN",
+      },
+
+      {
+        "@type": "WebPage",
+        "@id": "https://www.jbvexa.com/#webpage",
+
+        url: "https://www.jbvexa.com",
+
+        name: "JBVEXA Technologies | Engineering Digital Excellence",
+
+        isPartOf: {
+          "@id": "https://www.jbvexa.com/#website",
+        },
+
+        about: {
+          "@id": "https://www.jbvexa.com/#organization",
+        },
+
+        description:
+          "Enterprise AI, Cloud Engineering, Business Intelligence, Data Engineering, Cyber Security and Software Development services.",
+
+        inLanguage: "en-IN",
+      },
     ],
   };
 
